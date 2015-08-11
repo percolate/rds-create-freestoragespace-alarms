@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-"""rds_create_freestoragespace_alarms
+"""rds-create-freestoragespace-alarms
 
 Script used to create a below 20 pct. Low-FreeStorageSpace alarm
 in AWS CloudWatch for all RDS instances
 
 Usage:
-    rds_create_freestoragespace_alarms [options]
-    rds_create_freestoragespace_alarms [-h | --help]
+    rds-create-freestoragespace-alarms [options]
+    rds-create-freestoragespace-alarms [-h | --help]
 
 Options:
      --debug   Don't send data to AWS
