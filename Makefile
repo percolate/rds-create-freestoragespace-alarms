@@ -5,7 +5,7 @@ undevelop:
 	python setup.py develop --uninstall
 
 test:
-	flake8 rds-create-freestoragespace-alarms
+	flake8 rds_create_freestoragespace_alarms
 
 clean:
 	rm -rf rds-create-freestoragespace-alarms.egg-info/
