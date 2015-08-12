@@ -1,0 +1,11 @@
+dependencies:
+  pre:
+    - pip install flake8
+
+test:
+  override:
+    - flake8:
+        parallel: true
+        files:
+          - rds_create_freestoragespace_alarms/**/*.py
+    - rds-create-freestoragespace-alarms --help
