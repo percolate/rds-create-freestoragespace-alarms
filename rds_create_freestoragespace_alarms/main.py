@@ -4,7 +4,7 @@
 Script used to create a below 20 pct. Low-FreeStorageSpace alarm
 in AWS CloudWatch for all RDS instances
 
-e.g rds-create-freestoragespace-alarms us-west-1 arn:aws:sns:us-west-1:1234567:abc
+e.g rds-create-freestoragespace-alarms us-west-1 arn:aws:sns:us-west-1:1234:abc
 
 Usage:
     rds-create-freestoragespace-alarms [options] <region> <alarm_arn>
