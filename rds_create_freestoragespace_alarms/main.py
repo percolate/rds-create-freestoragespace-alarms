@@ -60,11 +60,26 @@ def get_existing_freestoragespace_alarm_names(aws_cw_connect):
     assert isinstance(aws_cw_connect,
                       boto.ec2.cloudwatch.CloudWatchConnection)
 
-    existing_alarms = aws_cw_connect.describe_alarms()
+
+    page_loop = aws_cw_connect.describe_alarms()
+    existing_alarms = set()
+
+    # adding the 1st page of alarms
+    for alarm in page_loop:
+        existing_alarms.add(alarm)
+
+    while page_loop.next_token:
+        page_loop = (aws_cw_connect.
+                     describe_alarms(next_token=page_loop.next_token))
+        # appending the latter pages
+        for alarm in page_loop:
+            existing_alarms.add(alarm)
+
     existing_alarm_names = set()
 
     for existing_alarm in existing_alarms:
-        existing_alarm_names.add(existing_alarm.name)
+        if existing_alarm.namespace == u'AWS/RDS':
+            existing_alarm_names.add(existing_alarm.name)
 
     return existing_alarm_names
 
@@ -140,6 +155,7 @@ def main():
         else:
             print 'New RDS Low-FreeStorageSpace Alarms created:'
             for alarm in alarms_to_create:
+                print " -", alarm
                 aws_cw_connect.create_alarm(alarm)
 
 
