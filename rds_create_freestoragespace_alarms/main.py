@@ -60,7 +60,6 @@ def get_existing_freestoragespace_alarm_names(aws_cw_connect):
     assert isinstance(aws_cw_connect,
                       boto.ec2.cloudwatch.CloudWatchConnection)
 
-
     page_loop = aws_cw_connect.describe_alarms()
     existing_alarms = set()
 
