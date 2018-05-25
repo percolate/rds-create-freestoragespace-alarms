@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='rds-create-freestoragespace-alarms',
-    version='1.3',
+    version='1.4',
     description='AWS Cloudwatch RDS Tool for creating Metric Alarms',
     url='https://github.com/percolate/rds-create-freestoragespace-alarms',
     author='Mihailo Pavlisin',
