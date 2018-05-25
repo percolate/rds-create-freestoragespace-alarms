@@ -17,7 +17,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'rds-create-freestoragespace-alarms=rds_create_freestoragespace_alarms.main:main'
+            ('rds-create-freestoragespace-alarms='
+             'rds_create_freestoragespace_alarms.main:main')
         ]
     },
     classifiers=[

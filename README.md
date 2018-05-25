@@ -3,9 +3,11 @@
 [![Circle CI](https://circleci.com/gh/percolate/rds-create-freestoragespace-alarms.svg?style=svg)](https://circleci.com/gh/percolate/rds-create-freestoragespace-alarms)
 
 Automate the creation of RDS Freestoragespace Alarms.
-The `Low-Freestoragespace` lower-bound limit in the script is 20%, but this can be altered.
+The `Low-Freestoragespace` lower-bound limit in the script is 20%, but this can
+be altered.
 
-# Quick Start
+## Quick Start
+
 ```bash
 """rds-create-freestoragespace-alarms
 
@@ -21,7 +23,8 @@ Options:
 """
 ```
 
-# Install
+## Install
+
 ```bash
-$ pip install rds-create-freestoragespace-alarms
+pip install rds-create-freestoragespace-alarms
 ```
